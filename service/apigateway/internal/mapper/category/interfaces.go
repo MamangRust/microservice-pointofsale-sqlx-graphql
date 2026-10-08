@@ -1,0 +1,20 @@
+package categorygraphqlmapper
+
+import (
+	"github.com/MamangRust/microservice-point-of-sale-apigateway/internal/model"
+	categorypb "github.com/MamangRust/microservice-point-of-sale-pb/category"
+)
+
+type CategoryGraphqlMapper interface {
+	ToGraphqlResponseCategory(res *categorypb.ApiResponseCategory) *model.APIResponseCategory
+	ToGraphqlResponsesCategory(res *categorypb.ApiResponsesCategory) *model.APIResponsesCategory
+	ToGraphqlResponseCategoryDeleteAt(res *categorypb.ApiResponseCategoryDeleteAt) *model.APIResponseCategoryDeleteAt
+	ToGraphqlResponseCategoryDelete(res *categorypb.ApiResponseCategoryDelete) *model.APIResponseCategoryDelete
+	ToGraphqlResponseCategoryAll(res *categorypb.ApiResponseCategoryAll) *model.APIResponseCategoryAll
+	ToGraphqlResponsePaginationCategory(res *categorypb.ApiResponsePaginationCategory) *model.APIResponsePaginationCategory
+	ToGraphqlResponseCategoryMonthlyTotalPrice(res *categorypb.ApiResponseCategoryMonthlyTotalPrice) *model.APIResponseCategoryMonthlyTotalPrice
+	ToGraphqlResponseCategoryYearlyTotalPrice(res *categorypb.ApiResponseCategoryYearlyTotalPrice) *model.APIResponseCategoryYearlyTotalPrice
+	ToGraphqlResponseCategoryMonthlyPrice(res *categorypb.ApiResponseCategoryMonthPrice) *model.APIResponseCategoryMonthPrice
+	ToGraphqlResponseCategoryYearlyPrice(res *categorypb.ApiResponseCategoryYearPrice) *model.APIResponseCategoryYearPrice
+	ToGraphqlResponsePaginationCategoryDeleteAt(res *categorypb.ApiResponsePaginationCategoryDeleteAt) *model.APIResponsePaginationCategoryDeleteAt
+}
